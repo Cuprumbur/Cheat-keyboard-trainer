@@ -42,6 +42,7 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.maskedTextBoxStartPosition = new System.Windows.Forms.MaskedTextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.maskedDelay = new System.Windows.Forms.MaskedTextBox();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -188,12 +189,22 @@
             this.label2.TabIndex = 12;
             this.label2.Text = "start";
             // 
+            // maskedDelay
+            // 
+            this.maskedDelay.Location = new System.Drawing.Point(614, 201);
+            this.maskedDelay.Mask = "999";
+            this.maskedDelay.Name = "maskedDelay";
+            this.maskedDelay.Size = new System.Drawing.Size(23, 20);
+            this.maskedDelay.TabIndex = 11;
+            this.maskedDelay.Text = "51";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(620, 230);
+            this.ClientSize = new System.Drawing.Size(686, 230);
             this.Controls.Add(this.label2);
+            this.Controls.Add(this.maskedDelay);
             this.Controls.Add(this.maskedTextBoxStartPosition);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.richTextBox1);
@@ -231,6 +242,7 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.MaskedTextBox maskedTextBoxStartPosition;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.MaskedTextBox maskedDelay;
     }
 }
 

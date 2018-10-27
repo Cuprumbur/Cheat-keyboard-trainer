@@ -55,7 +55,7 @@ namespace CheatingKeyboardSimulator
                     text = Cheat.RecognizePicture(screenShot, lang);
 
                     // Чистка от переносов и двойных пробелов
-                    text = text.Replace("\n", " ").Replace("\n\r", " ").Replace(Environment.NewLine, " ").Replace("  ", " ");
+                    text = text.Replace("“", "\"").Replace("‘","'").Replace("\n", " ").Replace("\n\r", " ").Replace(Environment.NewLine, " ").Replace("  ", " ");
 
                     richTextBox1.Text = text;
                     _result = Cheat.CheckSpelling(text, lang);
@@ -153,7 +153,8 @@ namespace CheatingKeyboardSimulator
         private void Emulate_Click(object sender, EventArgs e)
         {
             int startPosotion = int.Parse(maskedTextBoxStartPosition.Text);
-            Cheat.EmulateKeyboardInput(richTextBox1.Text, startPosotion);
+            int delay = int.Parse(maskedDelay.Text);
+            Cheat.EmulateKeyboardInput(richTextBox1.Text, startPosotion, delay);
         }
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
